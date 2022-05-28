@@ -14,7 +14,6 @@ arrClose.forEach(function(btnClose) {
     btnClose.onclick = function() {
         elemMain.classList.remove('modal_active');
         elemSuccess.classList.remove('modal_active');
-        console.log(`hey, we're closed`);
     }
 });
 
@@ -22,6 +21,5 @@ arrChange.forEach(function(btnChange) {
     btnChange.onclick = function() {
         elemMain.classList.remove('modal_active');
         elemSuccess.classList.toggle('modal_active');
-        console.log('hey, change');
     }
 });
