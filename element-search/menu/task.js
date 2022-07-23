@@ -1,15 +1,12 @@
 const menuLinks = document.querySelectorAll(".menu__link");
 
 menuLinks.forEach(menuLink => {
-    menuLink.onclick = function() {
+    menuLink.onclick = function () {
         const parentLink = menuLink.parentElement;
-        if (parentLink.querySelector('.menu_sub').className === 'menu menu_sub') {
-            parentLink.querySelector('.menu_sub').className = 'menu menu_sub menu_active';
-        } else {
-            parentLink.querySelector('.menu_sub').className = 'menu menu_sub';
-        }
+        const parentMenu = parentLink.querySelector('.menu_sub');
 
-        if (menuLink.closest('.menu_main')) {
+        if (parentMenu) {
+            parentMenu.classList.toggle('menu_active');
             return false;
         }
     }
